@@ -1,0 +1,20 @@
+python -m venv . venv
+
+terminal -> new terminal -> customize -> git bash
+
+source venv/Scripts/activate
+pip -V
+git init
+git remote add origin https://github.com/pwazydrag/CeneoScrapper.git
+git pull origin master
+
+
+
+git config --global user.name "pwazydrag"
+git config --global user.email "pwazydrag1@gmail.com"
+git remote add upstream https://github.com/Fiona84/CeneoScraper12S.git
+
+
+git fetch upstream master
+git merge upstream/master --allow-unrelated-histories
+git pull upstream master --allow-unrelated-histories

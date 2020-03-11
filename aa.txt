@@ -22,3 +22,11 @@ git merge upstream/master --allow-unrelated-histories
 source control -> accept both changes (na gorze)
 
 git pull upstream master --allow-unrelated-histories
+
+11-03-2020
+
+-m pip install -U pylint
+pip install requests                                                           <= biblioteka ktora nie jest domyslna w pythonie
+python -m pip install --upgrade pip
+pip install bs4
+pip freeze > requirements.txt                                                  <= wysyła biblioteki 

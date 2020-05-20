@@ -28,7 +28,8 @@ def extract():
         page_respons = requests.get("https://www.ceneo.pl/"+product_id)
         if page_respons.status_code == requests.codes["ok"]:
             product = Product(product_id)
-            
+            product.extract_product()
+            product.save_product()
             return redirect(url_for("product", id=product_id))
         else:
             form.product_id.errors.append("Podana wartość nie jest poprawnym kodem produktu")

@@ -2,10 +2,10 @@
 ## Etap 1 - pobranie składowych pojedynczej opinii
 - opinia: li.review-box
 - identyfikator: li.review-box["data-entry-id"]
-- autor: div.reviewer-name-line
-- rekomendacja: div.product-review-summary > em
-- gwiazdki: span.review-score-count
-- potwierdzona zakupem: div.product-review-pz
+- autor: user-post__author-name
+- rekomendacja: span.user-post__author-recomendation > em
+- gwiazdki: span.user-post__score-count
+- potwierdzona zakupem: div.review-pz
 - data wystawienia: span.review-time > time["datetime"] - pierwszy element listy
 - data zakupu: span.review-time > time["datetime"] - drugi element listy
 - przydatna: span[id=^votes-yes]
@@ -14,7 +14,7 @@
 - nieprzydatna: span[id=^votes-no]
                 button.vote-no["data-total-vote"]
                 button.vote-no > span
-- treść: p.product-review-body
+- treść: div.user-post__text
 - wady: div.cons-cell > ul
 - zalety: div.pros-cell > ul
 ## Etap 2 - pobranie składowych wszystkich opinii z pojedynczej strony

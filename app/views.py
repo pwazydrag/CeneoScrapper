@@ -5,6 +5,7 @@ from app.forms import ProductForm
 from app.models import Opinion, Product
 import requests
 import pandas as pd
+import os
 Markdown(app)
 
 app.config['SECRET_KEY'] = "Tajemnica"
@@ -58,4 +59,6 @@ def product(id):
 
 @app.route("/products")
 def products():
-    pass
+    products = os.listdir("app/opinions_json")
+    products = [product.replace(".json", "") for product in products]
+    return render_template("products.html", products=products)
